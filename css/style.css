@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: violet;
+  overflow-x: hidden;
+}
+
+/* header */
+
+#header {
+  height: 50px;
+  background-color: mediumaquamarine;
+}
+
+#header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  align-content: center;
+
+  margin: 0 5px;
+}
+
+#header #logo-mia {
+  font-style: italic;
+  font-size: 40px;
+  color: #ffda6b;
+}
+
+#header .vinyl {
+  animation: spinVinyl 4000ms linear infinite;
+
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes spinVinyl {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+/* main */
+
+.post-lists li {
+  font-size: 0px;
+}
+
+.post-lists li:nth-child(1) {
+  margin-top: 25px;
+}
+
+.post-lists li:hover {
+  background-color: bisque;
+  transition: 1000ms;
+}
+
+.post-lists li:last-child {
+  margin-bottom: 25px;
+}
+
+.container-post {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+}
+
+.post-thumbnail {
+  width: 250px;
+  height: 250px;
+  margin: 25px;
+}
+
+a .post-thumbnail:hover {
+  opacity: 0.7;
+}
+
+.post-text .category {
+  font-size: 13px;
+  font-style: italic;
+  margin-left: 3px;
+}
+
+.post-text .post-title {
+  font-size: 24px;
+}
+
+.article {
+  /* background-color: red; */
+  margin-right: 25px;
+
+  min-width: 400px;
+  max-width: 700px;
+  height: 160px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.article p {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+/* mobile version */
+
+@media (max-width: 767px) {
+  #header {
+    height: 40px;
+  }
+
+  #header .vinyl {
+    width: 35px;
+    height: 35px;
+  }
+
+  .post-lists li:nth-child(1) {
+    margin-top: 0;
+  }
+
+  .post-lists li {
+    padding-bottom: 25px;
+  }
+
+  .post-thumbnail {
+    width: 200px;
+    height: 200px;
+  }
+
+  .container-post {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+  }
+
+  .article {
+    min-width: 320px;
+    max-width: 600px;
+    margin: 0;
+  }
+
+  .post-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+
+    width: 95%;
+  }
+}
